@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
+
+final randomizer = Random();
 
 class RoleDice extends StatefulWidget {
   const RoleDice({super.key});
@@ -9,11 +12,11 @@ class RoleDice extends StatefulWidget {
 }
 
 class _RoleDiceState extends State<RoleDice> {
-  var srcImage = 'assets/images/dice-1.png';
+  var currentNum = 2;
 
   void roledice() {
     setState(() {
-      srcImage = 'assets/images/dice-2.png';
+      currentNum = randomizer.nextInt(6) + 1;
     });
     print("Hello World");
   }
@@ -24,7 +27,7 @@ class _RoleDiceState extends State<RoleDice> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          srcImage,
+          'assets/images/dice-$currentNum.png',
           width: 200,
         ),
         SizedBox(
