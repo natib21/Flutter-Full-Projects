@@ -16,7 +16,7 @@ class StartScreen extends StatelessWidget {
           children: [
             Image(
               image: AssetImage('assets/images/quiz-logo.png'),
-              width: 200,
+              width: 300,
             ),
             SizedBox(
               height: 80,
@@ -25,15 +25,19 @@ class StartScreen extends StatelessWidget {
               'Learn Fluter The Fun Way',
               style: TextStyle(color: Colors.white, fontSize: 25),
             ),
-            ElevatedButton(
-                style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(
-                        const Color.fromARGB(8, 26, 88, 180)),
-                    shape: WidgetStatePropertyAll(LinearBorder.none)),
+            SizedBox(
+              height: 30,
+            ),
+            OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    iconSize: 30,
+                    iconColor: Colors.white),
                 onPressed: () {
                   print('Hello');
                 },
-                child: Text(
+                icon: Icon(Icons.arrow_right_alt),
+                label: Text(
                   'Start Quiz',
                   style: TextStyle(
                       color: const Color.fromARGB(255, 255, 255, 255),
