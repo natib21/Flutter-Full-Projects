@@ -1,3 +1,4 @@
+import 'package:first_project_02/answer_button.dart';
 import 'package:flutter/material.dart';
 
 class QuestionScreen extends StatefulWidget {
@@ -11,6 +12,28 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreen extends State<QuestionScreen> {
   @override
   Widget build(context) {
-    return Text("This Is Question tab ");
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            "What is ....",
+            style: TextStyle(color: Colors.black, fontSize: 20),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          AnsweredButton(
+            answer: 'Click Me',
+            onTab: () {},
+          ),
+          AnsweredButton(
+            answer: 'Click Me',
+            onTab: () {},
+          )
+        ],
+      ),
+    );
   }
 }
