@@ -10,11 +10,11 @@ class AnsweredButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onTab,
-      child: Text(answer),
       style: ElevatedButton.styleFrom(
           backgroundColor: const Color.fromARGB(255, 50, 4, 131),
           foregroundColor: Colors.white,
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 5)),
+      child: Text(answer),
     );
   }
 }
